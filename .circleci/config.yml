@@ -33,7 +33,7 @@ jobs:
           command: |
             yarn install 
             yarn add percy
-            yarn add gatsby-cli
+            yarn add gatsby
 
       - save_cache:
           key: yarn-packages-{{ checksum "yarn.lock" }}
