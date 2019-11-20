@@ -32,8 +32,8 @@ jobs:
           name: install dependencies
           command: |
             yarn install 
-            yarn add percy
-            yarn add gatsby
+            yarn global add percy
+            yarn global add gatsby
 
       - save_cache:
           key: yarn-packages-{{ checksum "yarn.lock" }}
