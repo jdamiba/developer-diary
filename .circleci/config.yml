@@ -43,5 +43,4 @@ jobs:
       - run:
           name: percy screenshots
           command: |
-            gatsby build
             percy snapshot public
