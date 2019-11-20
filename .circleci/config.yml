@@ -32,7 +32,7 @@ jobs:
           name: install dependencies
           command: |
             yarn install 
-            yarn add percy-cli
+            yarn add percy
 
       - save_cache:
           key: yarn-packages-{{ checksum "yarn.lock" }}
