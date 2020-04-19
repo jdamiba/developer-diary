@@ -35,5 +35,5 @@ jobs:
           name: build and take percy screenshots
           command: |
             npx gatsby build
-            npx percy snapshot public
+            npx percy snapshot public --enable_javascript
             
