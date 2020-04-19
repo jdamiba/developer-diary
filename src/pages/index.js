@@ -50,7 +50,7 @@ const Post = styled.div`
 const Home = ({ data }) => {
   return (
     <>
-      <SEO title="Blog" />
+      <SEO title="Home" />
       <HeaderLogo />
       <Layout>
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120932216-1"></script>
@@ -109,7 +109,7 @@ const Home = ({ data }) => {
             While his bow'd head seem'd list'ning to the Earth,<br/>
             His ancient mother, for some comfort yet.
         </TextHome>
-        <TextHome><a href="https://www.poetryfoundation.org/poems/44473/hyperion">Read more</a></TextHome>
+        <TextHome><a href="https://www.poetryfoundation.org/poems/44473/hyperion">Read the rest</a></TextHome>
       </Layout>
     </>
   );
