@@ -9,7 +9,7 @@ Why do websites freeze up? Of course, there are many reasons. But often, the cul
 
 ### Threads and Programming
 
-Many computer processors are [multi-threaded](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture), which means that they can execute multiple instructions at the same time. Many programming languages are also multi-threaded, which means that they can directly take advantage of the multi-threaded structure of computer processors in order to let developers write programs which execute multiple instructions at once. 
+Many computer processors are [multi-threaded](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)), which means that they can execute multiple instructions at the same time. Many programming languages are also multi-threaded, which means that they can directly take advantage of the multi-threaded structure of computer processors in order to let developers write programs which execute multiple instructions at once. 
 
 Unfortunately, the web browser is only able to natively execute JavaScript, which is a [single-threaded](https://en.wikipedia.org/wiki/Thread_(computing)#Single_threading) programming language. This means that the JavaScript compiiler can only execute one instruction at a time, even if the computer processor in the system it is running on is multi-threaded. 
 
@@ -21,7 +21,7 @@ Unbeknownst to them, their actions are being picked up, it's just that they're b
 
 ### The JavaScript Call Stack
 
-The JavaScript runtime uses a data structure known as a [call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack) in order to keep track of the order in which program instructions should be executed. [Stacks](https://en.wikipedia.org/wiki/Stack_(abstract_data_type) are a last-in, first-out data structure, which means that the last instruction which is placed on the stack is the first to be executed.
+The JavaScript runtime uses a data structure known as a [call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack) in order to keep track of the order in which program instructions should be executed. [Stacks](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) are a last-in, first-out data structure, which means that the last instruction which is placed on the stack is the first to be executed.
 
 If every instruction in a program can be immediately executed, then the call stack only ever contains one instruction at a time. In this case, it is unlikely that users will notice JavaScript's single-threaded nature.   
 

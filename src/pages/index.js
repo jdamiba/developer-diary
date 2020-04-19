@@ -75,41 +75,17 @@ const Home = ({ data }) => {
             </Post>
           </Link>
         ))}
+
         <HeadingXL>data vizualizations</HeadingXL>
         <a href="https://choroplethmaps.josephdamiba.com"><TextHome>Choropleth maps</TextHome></a>
-        <HeadingXL>a song</HeadingXL>
 
-          <div className="flexbox">
-            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/LWz0JC7afNQ" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-          </div>
-          <HeadingXL>a poem</HeadingXL>
-          <TextHome>Hyperion (Book I excerpt) by John Keats</TextHome>
-          <TextHome>
-            Deep in the shady sadness of a vale<br/>
-            Far sunken from the healthy breath of morn,<br/>
-            Far from the fiery noon, and eve's one star,<br/>
-            Sat gray-hair'd Saturn, quiet as a stone,<br/>
-            Still as the silence round about his lair;<br/>
-            Forest on forest hung about his head<br/>
-            Like cloud on cloud. No stir of air was there,<br/>
-            Not so much life as on a summer's day<br/>
-            Robs not one light seed from the feather'd grass,<br/>
-            But where the dead leaf fell, there did it rest.<br/>
-            A stream went voiceless by, still deadened more<br/>
-            By reason of his fallen divinity<br/>
-            Spreading a shade: the Naiad 'mid her reeds<br/>
-            Press'd her cold finger closer to her lips.
-          </TextHome>
-          <TextHome>
-            Along the margin-sand large foot-marks went,<br/>
-            No further than to where his feet had stray'd,<br/>
-            And slept there since. Upon the sodden ground<br/>
-            His old right hand lay nerveless, listless, dead,<br/>
-            Unsceptred; and his realmless eyes were closed;<br/>
-            While his bow'd head seem'd list'ning to the Earth,<br/>
-            His ancient mother, for some comfort yet.
-        </TextHome>
-        <TextHome><a href="https://www.poetryfoundation.org/poems/44473/hyperion">Read the rest</a></TextHome>
+        <HeadingXL>websites</HeadingXL>
+        <a href="https://ivaniliclive.now.sh"><TextHome>Ivan Ilić Live</TextHome></a>
+        <a href="https://michelgondrymusicvideos.now.sh"><TextHome>Michel Gondry Music Videos</TextHome></a>
+        <a href="https://jazz-concerts.now.sh"><TextHome>Jazz Concerts</TextHome></a>
+        <a href="https://bestnewhiphop.now.sh"><TextHome>Best New Hip-Hop</TextHome></a>
+        <a href="https://form-validation.now.sh"><TextHome>Form Validaiton</TextHome></a>
+        
       </Layout>
     </>
   );
