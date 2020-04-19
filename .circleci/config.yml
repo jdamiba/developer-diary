@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:current-browsers
+
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1- 
+
+      - checkout
+
+      - save_cache:
+          key: source-v1-1
+          paths:
+            - ".git"
+
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+            - yarn-packages
+
+      - run:
+          name: install project dependencies
+          command: |
+            yarn install --ignore-engines
+
+      - save_cache:
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - run:
+          name: build and take percy screenshots
+          command: |
+            npx gatsby build
+            npx percy snapshot public
+            

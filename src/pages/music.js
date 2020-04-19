@@ -47,19 +47,26 @@ const Post = styled.div`
   }
 `;
 
-const About = ({ data }) => {
+const Music = ({ data }) => {
   return (
     <>
-      <SEO title="About" />
+      <SEO title="Song of the Day" />
       <HeaderLogo />
       <Layout>
         <Hero>
-          <HeadingXL>about joseph damiba</HeadingXL>
-          <TextHome>Joseph Damiba is a web developer and data scientist based in Montreal, Canada.</TextHome>
+          <HeadingXL>song of the day</HeadingXL>
+          <HeadingL style={{"textAlign": "center"}}>4.11.2020</HeadingL>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/LWz0JC7afNQ" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <HeadingL style={{"textAlign": "center"}}>4.10.2020</HeadingL>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/WdcqcF_4s8U" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
         </Hero>
       </Layout>
     </>
   );
 };
 
-export default About;
+export default Music;

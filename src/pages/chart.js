@@ -47,19 +47,32 @@ const Post = styled.div`
   }
 `;
 
-const About = ({ data }) => {
+const Chart = ({ data }) => {
   return (
     <>
-      <SEO title="About" />
+      <SEO title="Chart of The Day" />
       <HeaderLogo />
       <Layout>
         <Hero>
-          <HeadingXL>about joseph damiba</HeadingXL>
-          <TextHome>Joseph Damiba is a web developer and data scientist based in Montreal, Canada.</TextHome>
+          <HeadingXL>chart of the day</HeadingXL>
+          <HeadingL style={{"textAlign": "center"}}>4.10.2020</HeadingL>
+          
+          <a href="https://files-q79tjyo6o.now.sh/"><TextHome>Interactive choropleth map of 2016 USA Unemployment By County in R</TextHome></a>
+          <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-120932216-3');
+                `,
+          }}
+        />
         </Hero>
       </Layout>
     </>
   );
 };
 
-export default About;
+export default Chart;

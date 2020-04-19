@@ -12,10 +12,10 @@ export const HeadingXL = styled.h1`
     hsl(240, 100%, 70%)
   );
   display: block;
-  font-size: 80px;
+  font-size: 60px;
   letter-spacing: -4px;
   line-height: 1.2;
-  margin: 0 auto 10vh auto;
+  margin: 0 auto 5vh auto;
   text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

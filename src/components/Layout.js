@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 
 const Content = styled.main`
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1200px;
 
   @media (max-width: ${BREAKPOINT}px) {
     width: 100%;

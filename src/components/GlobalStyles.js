@@ -38,7 +38,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 19px;
     font-weight: 400;
     height: 100%;
-    padding-top: 20vh;
+    padding-top: 10vh;
 
   @media (max-width: ${BREAKPOINT}px) {
       font-size: 17px;
@@ -46,11 +46,32 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .flexbox{
+    display: flex;
+  }
+
+  .flexbox-stretch{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav {
+    margin-left: 20px;
+  }
+
+  iframe, img{
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+
   div a {
-    text-decoration: none;
-    color: inherit;
-    -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
-    -webkit-tap-highlight-color: transparent;
+    color: blue;
+  }
+
+  div a:hover {
+    text-decoration: underline;
   }
 
   /* CSS Reset */

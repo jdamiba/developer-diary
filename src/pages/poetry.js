@@ -47,42 +47,38 @@ const Post = styled.div`
   }
 `;
 
-const Home = ({ data }) => {
+const Poetry = ({ data }) => {
   return (
     <>
-      <SEO title="Blog" />
+      <SEO title="Poem of the Day" />
       <HeaderLogo />
       <Layout>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120932216-1"></script>
-      <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <Hero>
+          <HeadingXL>poem of the day</HeadingXL>
+          <HeadingL style={{"textAlign": "center"}}>4.11.2020</HeadingL>
+          <TextHome>A Drop Fell on the Apple Tree by Emily Dickinson</TextHome>
+          <TextHome>
+            A Drop Fell on the Apple Tree —<br/>
+            Another — on the Roof —<br/>
+            A Half a Dozen kissed the Eaves —<br/>
+            And made the Gables laugh —<br/>
 
-            gtag('config', 'UA-120932216-1');
-                `,
-          }}
-        />
-        <HeadingXL>blog posts</HeadingXL>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Link to={node.fields.slug} key={node.id}>
-            <Post>
-              <HeadingL>{node.frontmatter.title}</HeadingL>
-              <TextBody>{node.excerpt}</TextBody>
-              <TextDate>{node.frontmatter.date}</TextDate>
-            </Post>
-          </Link>
-        ))}
-        <HeadingXL>data vizualizations</HeadingXL>
-        <a href="https://choroplethmaps.josephdamiba.com"><TextHome>Choropleth maps</TextHome></a>
-        <HeadingXL>a song</HeadingXL>
+            A few went out to help the Brook<br/>
+            That went to help the Sea —<br/>
+            Myself Conjectured were they Pearls —<br/>
+            What Necklace could be —<br/>
 
-          <div className="flexbox">
-            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/LWz0JC7afNQ" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-          </div>
-          <HeadingXL>a poem</HeadingXL>
+            The Dust replaced, in Hoisted Roads —<br/>
+            The Birds jocoser sung —<br/>
+            The Sunshine threw his Hat away —<br/>
+            The Bushes — spangles flung —<br/>
+
+            The Breezes brought dejected Lutes —<br/>
+            And bathed them in the Glee —<br/>
+            Then Orient showed a single Flag,<br/>
+            And signed the Fete away —
+            </TextHome>
+          <HeadingL style={{"textAlign": "center"}}>4.10.2020</HeadingL>
           <TextHome>Hyperion (Book I excerpt) by John Keats</TextHome>
           <TextHome>
             Deep in the shady sadness of a vale<br/>
@@ -110,29 +106,10 @@ const Home = ({ data }) => {
             His ancient mother, for some comfort yet.
         </TextHome>
         <TextHome><a href="https://www.poetryfoundation.org/poems/44473/hyperion">Read more</a></TextHome>
+        </Hero>
       </Layout>
     </>
   );
 };
 
-export default Home;
-
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
+export default Poetry;
